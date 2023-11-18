@@ -1,0 +1,320 @@
+/* general styles */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fffff1
+}
+section {
+  margin-bottom: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 35px;
+  color: #062340;
+  margin-bottom: 15px;
+}
+h3 {
+  color: #c99407;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+a {
+  text-decoration: none;
+}
+/*  */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  background-color: #062340;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+header .logo img{
+  width: 150px;
+  border: 2px solid #062340;
+  border-radius: 50%;
+  padding: 20px;
+}
+header .logo img:hover {
+  border: 2px solid #c99407;
+  cursor: pointer;
+}
+.navbar {
+  background-color: #f3f3f3;
+  color: #062340;
+  height: 50px;
+  padding-top: 15px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.navbar ul li {
+  margin: 0 25px;
+}
+.navbar ul li a{
+  color: #062340;
+  padding: 7px 15px;
+  border-radius: 3px;
+}
+.navbar ul li a:hover {
+  background-color: #c99407;
+  color: #f3f3f3;
+}
+.intro {
+  margin-top: 30px;
+}
+.intro h1 strong {
+  text-transform: uppercase;
+  color: #c99407;
+  letter-spacing: 1.5px;
+}
+.intro h1 strong:hover {
+  color: #062340;
+  cursor: url(https://th.bing.com/th/id/OIP.lANQ1qgnTfKn6X9ApRLTSAAAAA?pid=ImgDet&w=54&h=51&rs=1), auto;
+}
+.intro p {
+  font-size: 18px;
+}
+.intro img {
+  width: 90%;
+  border-radius: 3px;
+}
+.about {
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 2px solid #062340;
+  border-radius: 3px;
+}
+.about p {
+  margin-bottom: 30px;
+}
+.about .row {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.about .row img {
+  width: 60px;
+}
+/* .tech {
+} */
+.portfolio {
+  max-width: 1200px;
+}
+.portfolio .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.portfolio .projects .flip-box .flip-box-inner .flip-box-front a img {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-box-front {
+  background-color: #062340;
+  color: #c99407;
+}
+.flip-box-back {
+  background-color: #062340;
+  color: #f3f3f3;
+  transform: rotateX(180deg);
+}
+.flip-box-back h3 {
+  margin-top: 80px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact .form {
+  background-color: #062340;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  color: #f3f3f3;
+  width: 500px;
+  height: auto;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.35),
+              5px 3px 15px 0px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+.contact .form h1 {
+  color: #f3f3f3;
+}
+.contact .form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.contact .form .form-group label {
+  font-size: 18px;
+  text-align: start;
+  margin-bottom: 5px;
+}
+.contact .form .form-group input, .contact .form .form-group textarea {
+  border: none;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 18px;
+  box-shadow: 3px 3px 3px 0px rgba(194,194,194,0.75) inset;
+}
+.contact .form .form-group input:focus, .contact .form .form-group textarea:focus {
+  outline: none;
+}
+.contact .form .btn {
+	display: inline-block;
+	padding: 15px;
+  margin-top: 30px;
+  border: none;
+	border-radius: 3px;
+	color: #062340;
+	text-transform: uppercase;
+	font-size: 20px;
+  font-weight: 600;
+	letter-spacing: 1.2px;
+	transition: all .3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.35),
+              5px 3px 15px 0px rgba(0,0,0,0.15);
+}
+.contact .form .btn::after{
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #c99407;
+	border-radius: 3px;
+	z-index: -2;
+}
+.contact .form .btn::before {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: #135918;
+	transition: all .3s;
+	border-radius: 3px;
+	z-index: -1;
+}
+.contact .form .btn:hover {
+  color: #c99407;
+  cursor: pointer;
+}
+.contact .form .btn:hover::before {
+  width: 100%;
+}
+footer {
+  display: flex;
+  background-color: #062340;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+footer ul li {
+  margin-right: 15px;
+}
+footer ul li a img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  padding: 5px;
+  border-radius: 3px;
+  border: 2px solid #062340;
+}
+footer ul li a img:hover {
+  border: 2px solid #c99407;
+}
+footer .logo img {
+  width: 150px;
+  border-radius: 50%;
+  padding: 20px;
+}
+@media (max-width: 650px) {
+  .navbar ul li {
+    margin-right: 5px;
+    justify-content: space-between;
+  }
+  .about .row {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .row img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  .contact .form {
+    max-width: 90%;
+  }
+  footer {
+    flex-direction: column-reverse;
+  }
+  footer ul li{
+    margin-right: 2px;
+  }
+}
+@media (max-width: 510px) {
+  nav {
+    display: none;
+  }
+}
